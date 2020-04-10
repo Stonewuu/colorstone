@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: ${spring.application.name}
+        file-extension: yaml
+        shared-configs: colorstone-datasource-local.yml
+#    sentinel:
+#      transport:
+#        port: 8179
+#        dashboard: localhost:8080
+
+jwt:
+  header: 'Authorization'
+  tokenHead: 'Bearer '
+  expiration: 72000
+
+platform:
+  name: colorstone
+# 本地开发不需要连接logstash
+logging:
+  config: classpath:logback-spring-local.xml

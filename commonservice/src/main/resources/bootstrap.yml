@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: colorstone-common
+  profiles:
+    active: local
+
+
+
+
+logging:
+  file:
+    name: logs/${spring.application.name}/${spring.application.name}.log
+

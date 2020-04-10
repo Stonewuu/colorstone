@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: colorstone-gateway
+  profiles:
+    active: local
+
+
+
+
+logging:
+  file:
+    name: logs/${spring.application.name}/${spring.application.name}.log
+
